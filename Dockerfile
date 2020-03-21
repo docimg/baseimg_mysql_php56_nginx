@@ -26,6 +26,8 @@ RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositorie
     && chown -R www-data:www-data /var/www/html \
     && mv /tmp/docker-php-ext-mysqli.ini /usr/local/etc/php/conf.d \
     && mv /tmp/docker-php-ext-pdo_mysql.ini /usr/local/etc/php/conf.d \
+    && mv /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
+    && echo 'date.timezone = "Asia/Shanghai"' >> /usr/local/etc/php/php.ini \
     # clear
     && rm -rf /tmp/*
 

@@ -1,11 +1,9 @@
-FORK FROM ctftraining/base_image_nginx_mysql_php_73
-
 # Base Image LNMP
 
 - L: Linux alpine
 - N: Nginx
 - M: MySQL
-- P: PHP 7.3
+- P: PHP 5.6
 - PHP MySQL Ext
     + mysql
     + mysqli
@@ -23,9 +21,11 @@ FORK FROM ctftraining/base_image_nginx_mysql_php_73
 ### Dockerfile
 
 ```
-FROM docimg/baseimg_mysql_php73_nginx
+FROM docimg/baseimg_mysql_php56_nginx
 
 ```
+php配置信息目录：/usr/local/etc/php/
+
 默认端口：80
 
 默认web目录：/var/www/html
