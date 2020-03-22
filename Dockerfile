@@ -36,5 +36,3 @@ WORKDIR /var/www/html
 EXPOSE 80
 
 VOLUME ["/var/log/nginx"]
-
-CMD ["/bin/bash", "-c", "docker-php-entrypoint"]
